@@ -41,10 +41,12 @@ function updateDate() {
     let year = date.getFullYear();
 
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const monthsNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 
-    month = months[month];
+    ]
+    month = monthsNumber[month];
 
-    dateContainer.textContent = `${month} ${day}, ${year}`;
+    dateContainer.textContent = `${month}/${day}/${year}`;
 
     const today = date.toDateString();
 
@@ -249,10 +251,9 @@ async function updateWeather() {
         let lowTemperature = weatherData.daily.temperature_2m_min[0];
         lowTemperature = Math.round(lowTemperature);
 
-        dailyTemperatureContainer.textContent = `H: ${highTemperature}°F L: ${lowTemperature}°F`
-
+        dailyTemperatureContainer.textContent = `H: ${highTemperature}°F\nL: ${lowTemperature}°F`;
         weatherContainer.textContent = `${weather.description}`;
-        weatherIcon.className = icon;
+        //weatherIcon.className = icon;
     } catch (error) {
         weatherContainer.textContent = "Weather data unavailable";
         console.error(error);
