@@ -229,7 +229,8 @@ async function updateWeather() {
             }
         };
 
-        const weather = weatherConditions[weatherCode] ?? {
+        // || instead of ?? here since older devices don't support ??
+        const weather = weatherConditions[weatherCode] || {
             description: "Unknown weather conditions",
             dayIcon: "wi wi-na",
             nightIcon: "wi wi-na"
