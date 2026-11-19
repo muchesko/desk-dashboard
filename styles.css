@@ -1,0 +1,79 @@
+:root {
+    --icon-size: 64px;
+}
+
+.wi {
+    font-size: var(--icon-size);
+    color: white;
+}
+
+.calendar-icon, .clock-icon, .temperature-icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    stroke-width: .5;
+    color: white;
+}
+
+body {
+    font-family: "Bitcount Grid Single", system-ui;
+    color: white;    
+    background-color: black;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.weather-icon {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+    filter: invert(1);
+}
+
+svg {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid red;
+}
+
+.time {
+    font-size: 100px;
+}
+
+.date {
+    font-size: 40px;
+}
+
+.temperature {
+    font-size: 60px;
+}
+
+.daily-temperature {
+    font-size: 40px;
+}
+
+.weather,
+i {
+    font-size: 60px;
+}
+
+.time-container,
+.date-container,
+.temperature-container,
+.weather-container {
+    flex-direction: row;
+    gap: 1rem;
+}
