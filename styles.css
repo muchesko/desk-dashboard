@@ -23,7 +23,7 @@ body {
 }
 
 body {
-    font-family: "Bitcount Grid Single", system-ui;
+    font-family: "JetBrains Mono", monospace;
     color: white;
     min-height: 100vh;
 }
@@ -45,11 +45,10 @@ main {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 2fr 1fr 1fr 1fr;
-    padding: 1rem;
 }
 
 .time {
-    font-size: 14rem;
+    font-size: 13rem;
 }
 
 .date {
