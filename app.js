@@ -8,7 +8,7 @@ function updateClock() {
     let minute = date.getMinutes();
     let period = "";
 
-    if (hour === 0) {
+    /*if (hour === 0) {
         hour = 12;
         period = "AM";
     } else if (hour === 12) {
@@ -18,7 +18,7 @@ function updateClock() {
     } else {
         period = "PM";
         hour = hour - 12;
-    }
+    }*/
 
     minute = minute.toString();
     minute = minute.padStart(2, "0");

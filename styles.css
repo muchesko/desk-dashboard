@@ -4,7 +4,7 @@
 
 .wi {
     font-size: var(--icon-size);
-    color: white;
+    color: rgb(128, 128, 128);
 }
 
 .calendar-icon,
@@ -24,7 +24,7 @@ body {
 
 body {
     font-family: "JetBrains Mono", monospace;
-    color: white;
+    color: rgba(255, 255, 255, 0.1);
     min-height: 100vh;
 }
 
@@ -48,7 +48,7 @@ main {
 }
 
 .time {
-    font-size: 13rem;
+    font-size: 21rem;
 }
 
 .date {
