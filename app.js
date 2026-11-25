@@ -271,8 +271,8 @@ async function updateWeather() {
         let lowTemperature = weatherData.daily.temperature_2m_min[0];
         lowTemperature = Math.round(lowTemperature);
 
-        dailyHighTemperatureContainer.textContent = `H: ${highTemperature}°F`;
-        dailyLowTemperatureContainer.textContent = `L: ${lowTemperature}°F`;
+        dailyHighTemperatureContainer.textContent = `H:${highTemperature}°F`;
+        dailyLowTemperatureContainer.textContent = `L:${lowTemperature}°F`;
         weatherContainer.textContent = `${weather.description}`;
         //weatherIcon.className = icon;
     } catch (error) {
