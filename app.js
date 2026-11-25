@@ -47,14 +47,25 @@ function updateDate() {
     let day = date.getDate();
     let month = date.getMonth();
     let year = date.getFullYear();
+    let dayOfWeek = date.getDay();
+
+    console.log(dayOfWeek);
+
+    const days = [
+        { name: "Sunday", day: 0 },
+        { name: "Monday", day: 1 },
+        { name: "Tuesday", day: 2 },
+        { name: "Wednesday", day: 3 },
+        { name: "Thursday", day: 4 },
+        { name: "Friday", day: 5 },
+        { name: "Saturday", day: 6},
+    ];
 
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const monthsNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
-
-    ]
+    const monthsNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     month = monthsNumber[month];
 
-    dateContainer.textContent = `${month}/${day}/${year}`;
+    dateContainer.textContent = `${days[dayOfWeek].name} ${month}/${day}/${year}`;
 
     const today = date.toDateString();
 
@@ -69,7 +80,8 @@ updateDate();
 setInterval(updateDate, 60000);
 
 const temperatureContainer = document.querySelector(".temperature");
-const dailyTemperatureContainer = document.querySelector(".daily-temperature");
+const dailyHighTemperatureContainer = document.querySelector(".daily-high-temperature");
+const dailyLowTemperatureContainer = document.querySelector(".daily-low-temperature")
 const weatherContainer = document.querySelector(".weather");
 const weatherIcon = document.querySelector(".weather-icon")
 
@@ -259,7 +271,8 @@ async function updateWeather() {
         let lowTemperature = weatherData.daily.temperature_2m_min[0];
         lowTemperature = Math.round(lowTemperature);
 
-        dailyTemperatureContainer.textContent = `H: ${highTemperature}°F\nL: ${lowTemperature}°F`;
+        dailyHighTemperatureContainer.textContent = `H: ${highTemperature}°F`;
+        dailyLowTemperatureContainer.textContent = `L: ${lowTemperature}°F`;
         weatherContainer.textContent = `${weather.description}`;
         //weatherIcon.className = icon;
     } catch (error) {
