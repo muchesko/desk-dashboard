@@ -1,10 +1,10 @@
 :root {
     --icon-size: 64px;
-    --text-color: #404040;
+    --text-color: #ffffff;
 }
 
 :root.night-mode {
-    --text-color: #303030;
+    --text-color: #404040;
 }
 
 .wi {
@@ -57,21 +57,21 @@ main {
 }
 
 .date {
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .temperature {
-    font-size: 3rem;
+    font-size: 7rem;
 }
 
 .daily-temperature {
     white-space: pre-line;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .weather,
 i {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .time-container,
@@ -79,7 +79,7 @@ i {
 .temperature-container,
 .weather-container {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: row;
@@ -90,15 +90,21 @@ i {
     align-items: center;
 }
 
+.temperature-container {
+    align-items: center;
+}
+
 @media (orientation: landscape) {
     main {
         min-height: 100vh;
+        max-height: 100vh;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 2fr;
         grid-template-areas:
-            "time time time"
-            "date temperature weather";
+            "time time"
+            "date date"
+            "temperature weather";
     }
 }
 
