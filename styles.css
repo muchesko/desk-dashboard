@@ -72,6 +72,14 @@ main {
     font-size: 2rem;
 }
 
+.daily-high-temperature {
+    padding-right: 1rem;
+}
+
+.daily-low-temperature {
+    padding-left: 1rem;
+}
+
 .weather,
 i {
     font-size: 4rem;
@@ -103,7 +111,6 @@ i {
 
 .daily-temperature-container {
     flex-direction: row;
-    gap: 2rem;
 }
 
 @media (orientation: landscape) {
