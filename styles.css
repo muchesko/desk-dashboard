@@ -46,10 +46,6 @@ svg {
     image-rendering: pixelated;
 }
 
-div {
-    border: solid red;
-}
-
 main {
     min-height: 100vh;
     display: grid;
