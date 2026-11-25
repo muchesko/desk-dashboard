@@ -1,5 +1,13 @@
 const timeContainer = document.querySelector(".time");
 
+function updateTheme() {
+    const hour = new Date().getHours();
+    document.documentElement.classList.toggle("night-mode", hour >= 22 || hour < 10);
+}
+
+updateTheme();
+setInterval(updateTheme, 60000);
+
 
 function updateClock() {
     const date = new Date();
@@ -65,7 +73,7 @@ const dailyTemperatureContainer = document.querySelector(".daily-temperature");
 const weatherContainer = document.querySelector(".weather");
 const weatherIcon = document.querySelector(".weather-icon")
 
-const url = "https://api.open-meteo.com/v1/forecast?latitude=35.2271&longitude=-80.8431&current=temperature_2m,weather_code,is_day&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FNew_York";
+const url = "https://api.open-meteo.com/v1/forecast?latitude=35.4750&longitude=-81.2386&current=temperature_2m,weather_code,is_day&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FNew_York";
 
 async function updateWeather() {
     try {
