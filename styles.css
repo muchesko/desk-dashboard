@@ -1,10 +1,10 @@
 :root {
     --icon-size: 64px;
-    --text-color: #ffffff;
+    --text-color: #707070;
 }
 
 :root.night-mode {
-    --text-color: #404040;
+    --text-color: #4d4d4d;
 }
 
 .wi {
